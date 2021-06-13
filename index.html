@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Turntable Subtitles</title>
+</head>
+<body>
+  <!-- Navigation -->
+  <div class="d-flex flex-column flex-md-row align-items-center py-3 px-md-4 mb-3 nav-wrapper w-100 bg-white px-0" id="navbar">
+    <h5 class="my-0 mr-md-auto mt-md-2 font-weight-normal">
+        <img src="img/logo.jpg" alt="Turntable Subtitles | Breaking boundries, one song at a time">
+    </h5>
+    <button type="button" class="bg-transparent border-0 my-3 d-block d-md-none">
+      <div class="mb-2" style="width:35px;height:5px;border-radius:4px;background-color:#1d3557"></div>
+      <div style="width:35px;height:5px;border-radius:4px;background-color:#1d3557"></div>
+    </button>
+    <nav class="my-2 my-md-0 mr-md-0 d-none d-md-block mr-lg-3">
+      <a class="p-2 text-dark mx-lg-2 my-navitem" href="#">Library</a>
+      <a class="p-2 text-dark mx-lg-2 my-navitem" href="#about" onclick="smoothAnchorScroll()">About</a>
+      <a class="p-2 text-dark mx-lg-2 my-navitem" href="#pricing">Pricing</a>
+      <a class="p-2 text-dark mx-lg-2 my-navitem" href="#faq" onclick="smoothAnchorScroll()">FAQs</a>
+    </nav>
+    <a class="btn btn-outline-red mt-3 mt-md-0" href="#" onclick="smoothAnchorScroll()">Get Started</a>
+  </div><!-- End. Navigation -->
+  <div class="container-fluid">
+    <!--.jumbotron-->
+    <div class="jumbotron jumbotron-fluid width-contained pt-xl-3">
+      <div class="row">
+          <div class="col col-12 col-md-6 px-5 d-md-flex align-items-center">
+              <div class="w-100" style="max-width:100%;overflow:hidden;">
+                  <h2 class="display-4 slideDown mb-3 mb-md-5 text-center text-md-left">Breaking boundries<br>one song at a time</h2>
+                  <div class="d-flex flex-column flex-md-row align-items-center slideUp">
+                    <button type="button" class="btn btn-rounded btn-primary align-items-center d-flex"><i class="fas fa-play-circle fa-2x mr-3"></i>Play Now</button>
+                    <a href="#how-does-it-work" class="text-muted ml-3 text-center mt-3 mt-md-0 text-md-left" style="text-decoration:underline;">How does Turntable work?</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col col-12 col-md-6 d-none d-md-flex align-items-center illustration_hero">
+              <img src="img/illustration_hero/bgred.svg" alt="Turntable - Breaking boundries through music" id="bgred">
+              <img src="img/illustration_hero/moutain.svg" alt="Turntable - Breaking boundries through music" id="mountain" class="fadeIn">
+              <img src="img/illustration_hero/leaf1.svg" id="leaf1" alt="Turntable - Breaking boundries through music" class="fadeIn">
+              <img src="img/illustration_hero/leaf2.svg" id="leaf2" alt="Turntable - Breaking boundries through music" class="fadeIn">
+              <img src="img/illustration_hero/human.svg" id="human" alt="Turntable - Breaking boundries through music" class="fadeIn layer" data-speed="2">
+              <img src="img/illustration_hero/disk.svg" id="disk" alt="Turntable - Breaking boundries through music" class="fadeIn layer" data-speed="5">        
+          </div>
+      </div>
+    </div><!-- .jumbtron-fluid -->
+    <!-- Latest Songs -->
+    <div class="row justify-content-center py-3 py-lg-5 mt-3 mt-lg-5 mb-0">
+      <h2 class="text-white display-4 my-5 text-center slideDown">Latest Songs<br><a href="#" class="badge bg-primary mt-3">Song Library</a></h2>
+      <div class="bg-blue" style="width:100%;position:absolute;width:100%;height:200%;top:0;z-index:-1"></div>
+      <div class="wave wave1 d-none d-md-block"></div>
+      <div class="wave wave2 d-none d-md-block"></div>
+      <div class="wave wave3 d-none d-md-block"></div>
+      <div class="wave wave4 d-none d-md-block"></div>
+    </div><!--.row-->
+    <!-- Carousel -->
+    <div class="row justify-content-center pb-0 pb-md-5">
+      <div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2 slideUp" data-ride="carousel">
+        <div class="carousel-inner v-2" role="listbox">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col col-12 col-md-6 col-lg-4">
+                <div class="card">
+                  <span class="flag-icon flag-icon-kr"></span>
+                  <!-- Card image -->
+                  <div class="view overlay">
+                    <img class="card-img-top" src="img/demo/korean.jpg" alt="Card image cap">
+                    <a>
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <!-- Button -->
+                  <a class="btn-floating btn-action ml-auto mr-4 mdb-color lighten-3 shadow"><i class="fas fa-caret-right fa-2x text-white pl-1"></i></a>
+                  <!-- Card content -->
+                  <div class="card-body mt-n5 text-center">
+                    <!-- Title -->
+                    <h4 class="card-title">House Party</h4>
+                    <hr>
+                    <!-- Text -->
+                    <p class="card-text">슈퍼주니어</p>
+                  </div>
+                  <!-- Card footer -->
+                  <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
+                    <ul class="list-unstyled list-inline font-small">
+                      <li class="list-item pr-2 white-text"><i class="fas fa-microphone pr-1 mr-2 mb-2"></i>Super Junior</li>
+                      <li class="list-item pr-2"><a href="#" class="white-text"><i class="fas fa-compact-disc mr-2"></i>The Renaissance (2021)</a></li>
+                    </ul>
+                  </div>
+                </div><!-- .card -->
+              </div>
+              <div class="col col-12 col-md-6 col-lg-4 d-none d-md-flex">
+                <div class="card">
+                  <span class="flag-icon flag-icon-ma"></span>
+                  <!-- Card image -->
+                  <div class="view overlay">
+                    <img class="card-img-top" src="img/demo/arabic.jpg" alt="Card image cap">
+                    <a>
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <!-- Button -->
+                  <a class="btn-floating btn-action ml-auto mr-4 mdb-color lighten-3 shadow"><i class="fas fa-caret-right fa-2x text-white pl-1"></i></a>
+                  <!-- Card content -->
+                  <div class="card-body mt-n5 text-center">
+                    <!-- Title -->
+                    <h4 class="card-title">Boss</h4>
+                    <hr>
+                    <!-- Text -->
+                    <p class="card-text">لمعلم</p>
+                  </div>
+                  <!-- Card footer -->
+                  <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
+                    <ul class="list-unstyled list-inline font-small">
+                      <li class="list-item pr-2 white-text"><i class="fas fa-microphone pr-1 mr-2 mb-2"></i>Saad Lamjarred</li>
+                      <li class="list-item pr-2"><a href="#" class="white-text"><i class="fas fa-compact-disc mr-2"></i>LM3ALLEM (2015)</a></li>
+                    </ul>
+                  </div>
+                </div><!-- .card -->
+              </div>
+              <div class="col col-12 col-lg-4 d-none d-lg-flex">
+                <div class="card">
+                  <span class="flag-icon flag-icon-mx"></span>
+                  <!-- Card image -->
+                  <div class="view overlay">
+                    <img class="card-img-top" src="img/demo/spanish.jpg" alt="Card image cap">
+                    <a>
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <!-- Button -->
+                  <a class="btn-floating btn-action ml-auto mr-4 mdb-color lighten-3 shadow"><i class="fas fa-caret-right fa-2x text-white pl-1"></i></a>
+                  <!-- Card content -->
+                  <div class="card-body mt-n5 text-center">
+                    <!-- Title -->
+                    <h4 class="card-title">Who Do You Think You're?</h4>
+                    <hr>
+                    <!-- Text -->
+                    <p class="card-text">¿Quién Te Crees?</p>
+                  </div>
+                  <!-- Card footer -->
+                  <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
+                    <ul class="list-unstyled list-inline font-small">
+                      <li class="list-item pr-2 white-text"><i class="fas fa-microphone pr-1 mr-2 mb-2"></i>Mc Davo Ft. Calibre 50</li>
+                      <li class="list-item pr-2"><a href="#" class="white-text"><i class="fas fa-compact-disc mr-2"></i>¿Quién Te Crees? (2021)</a></li>
+                    </ul>
+                  </div>
+                </div><!-- .card -->
+              </div>
+            </div> 
+          </div><!-- .carousel-item -->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col col-12 col-md-6 col-lg-4">
+                <div class="card">
+                  <span class="flag-icon flag-icon-in"></span>
+                  <!-- Card image -->
+                  <div class="view overlay">
+                    <img class="card-img-top" src="img/demo/hindi.jpg" alt="Card image cap">
+                    <a>
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <!-- Button -->
+                  <a class="btn-floating btn-action ml-auto mr-4 mdb-color lighten-3 shadow"><i class="fas fa-caret-right fa-2x text-white pl-1"></i></a>
+                  <!-- Card content -->
+                  <div class="card-body mt-n5 text-center">
+                    <!-- Title -->
+                    <h4 class="card-title">Every Way Is Beautiful</h4>
+                    <hr>
+                    <!-- Text -->
+                    <p class="card-text">हर फन मौला</p>
+                  </div>
+                  <!-- Card footer -->
+                  <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
+                    <ul class="list-unstyled list-inline font-small">
+                      <li class="list-item pr-2 white-text"><i class="fas fa-microphone pr-1 mr-2 mb-2"></i>Zara Khan, Vishal Dadlani</li>
+                      <li class="list-item pr-2"><a href="#" class="white-text"><i class="fas fa-compact-disc mr-2"></i>Koi Jaane Na (2021)</a></li>
+                    </ul>
+                  </div>
+                </div><!-- .card -->
+              </div>
+              <div class="col col-12 col-md-6 col-lg-4 d-none d-md-flex">
+                <div class="card">
+                  <span class="flag-icon flag-icon-jp"></span>
+                  <!-- Card image -->
+                  <div class="view overlay">
+                    <img class="card-img-top" src="img/demo/japanese.jpg" alt="Card image cap">
+                    <a>
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <!-- Button -->
+                  <a class="btn-floating btn-action ml-auto mr-4 mdb-color lighten-3 shadow"><i class="fas fa-caret-right fa-2x text-white pl-1"></i></a>
+                  <!-- Card content -->
+                  <div class="card-body mt-n5 text-center">
+                    <!-- Title -->
+                    <h4 class="card-title">Innocent World</h4>
+                    <hr>
+                    <!-- Text -->
+                    <p class="card-text">Innocent World</p>
+                  </div>
+                  <!-- Card footer -->
+                  <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
+                    <ul class="list-unstyled list-inline font-small">
+                      <li class="list-item pr-2 white-text"><i class="fas fa-microphone pr-1 mr-2 mb-2"></i>Mr. Children</li>
+                      <li class="list-item pr-2"><a href="#" class="white-text"><i class="fas fa-compact-disc mr-2"></i>Atomic Heart (1994)</a></li>
+                    </ul>
+                  </div>
+                </div><!-- .card -->
+              </div>
+              <div class="col col-12 col-lg-4 d-none d-lg-flex">
+                <div class="card">
+                  <span class="flag-icon flag-icon-no"></span>
+                  <!-- Card image -->
+                  <div class="view overlay">
+                    <img class="card-img-top" src="img/demo/norwegian.jpg" alt="Card image cap">
+                    <a>
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <!-- Button -->
+                  <a class="btn-floating btn-action ml-auto mr-4 mdb-color lighten-3 shadow"><i class="fas fa-caret-right fa-2x text-white pl-1"></i></a>
+                  <!-- Card content -->
+                  <div class="card-body mt-n5 text-center">
+                    <!-- Title -->
+                    <h4 class="card-title">The Finest Chevy´n</h4>
+                    <hr>
+                    <!-- Text -->
+                    <p class="card-text">Den fineste Chevy´n</p>
+                  </div>
+                  <!-- Card footer -->
+                  <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
+                    <ul class="list-unstyled list-inline font-small">
+                      <li class="list-item pr-2 white-text"><i class="fas fa-microphone pr-1 mr-2 mb-2"></i>Halva Priset, Maria Mena</li>
+                      <li class="list-item pr-2"><a href="#" class="white-text"><i class="fas fa-compact-disc mr-2"></i>Den fineste Chevy'n (2021)</a></li>
+                    </ul>
+                  </div>
+                </div><!-- .card -->
+              </div>
+            </div>
+          </div>
+        </div><!-- carousel inner -->
+        <!-- Indicators -->
+        <ol class="carousel-indicators d-flex align-items-center mt-5">
+          <li data-target="#carousel-example-multi" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-multi" data-slide-to="1"></li>
+        </ol>
+        <!--/.Indicators-->
+      </div><!-- .carousel -->
+    </div><!-- .row -->
+    <!-- End Carousel -->
+    <!-- end Latest Songs -->
+    <div class="row scrollTargets" id="about"></div>
+    <!-- About -->
+    <div class="row justify-content-center pb-5 mb-3" >
+      <div class="col col-12 col-md-8 col-xl-4 text-center slideDown">
+        <h2 class="text-primary display-4 py-5 pt-md-0 mt-xl-5">About</h2>
+        <p class="lead">Turntable is your personal lyrics sharing server. Let more people know your favorite music by breaking language barriers, one song at a time!</p>
+      </div>
+    </div>
+    <div class="row justify-content-center" style="position:relative;">
+      <div class="col col-12 col-md-8 col-xl-5 slideUp">
+        <div class="embed-responsive embed-responsive-16by9 rounded shadow">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/w22rNRCoV7Y?controls=0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <img src="img/disc.svg" alt="How does Turntable Subtitles work?" id="disc" class="d-none d-md-block">
+      <img src="img/redbubble.svg" alt="How does Turntable Subtitles work?" id="redbubble">
+    </div>
+    <!-- End About-->
+    <div class="row scrollTargets" id="pricing"></div>
+    <!-- Pricing -->
+    <div class="row justify-content-center py-3 py-md-5 my-0 my-md-5">
+      <div class="col col-12 col-md-8 col-xl-4 text-center slideDown">
+        <h2 class="text-primary display-4 pt-5">Pricing</h2>
+        <p class="text-muted mt-3">7-day free trial. Cancel anytime.</p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center align-items-end mb-5 pb-5 width-contained">
+      <div class="width-contained mx-auto d-flex flex-column flex-md-row align-items-top align-items-md-end pricing pb-lg-5 slideUp">
+        <div class="col col-12 col-md-4 mb-3 mb-md-0"> 
+          <div class="card text-center">
+            <img
+              src="img/pricing1.jpg"
+              class="card-img-top"
+              alt="Turntable Subtitles"
+            />
+            <div class="card-body">
+              <h3 class="card-title text-uppercase font-weight-bold mt-3 mb-5">Free</h3>
+              <div class="d-flex align-items-center px-3 pb-3">
+                <i class="fas fa-check text-success"></i>
+                <p class="card-text text-left px-3">512MB Storage Space</p>
+              </div>
+              <div class="d-flex align-items-center px-3 pb-3">
+                <i class="fas fa-check text-success"></i>
+                <p class="card-text text-left px-3"></i>Unlimited Sharing</p>
+              </div>
+              <div class="d-flex align-items-center px-3 pb-3">
+                <i class="fas fa-check text-success"></i>
+                <p class="card-text text-left px-3"></i>Share & Like Other Curators' Works</p>
+              </div>
+              <div class="d-flex align-items-center px-3 pb-3">
+                <i class="fas fa-times text-danger"></i>
+                <p class="card-text text-left px-3">No Server Upgrade</p>
+              </div>
+              <div class="d-flex align-items-center px-3 pb-3">
+                <i class="fas fa-times text-danger"></i>
+                <p class="card-text text-left px-3">Storage Space Removed After 3-month Inactivity</p>
+              </div>
+              <a href="#!" class="w-100 rounded btn btn-primary mt-5">Select</a>
+            </div>
+          </div><!-- .card -->
+        </div>
+        <div class="col col-12 col-md-4 mb-3 mb-md-0">
+          <div class="card text-center">
+            <img
+              src="img/redblock.jpg"
+              class="card-img-top"
+              alt="Turntable Subtitles | Break Boundries, One Song at A Time"
+            />
+            <div class="card-body">
+              <h3 class="card-title font-weight-bold mt-5 mb-5">$4.99 / mo<br><span class="badge bg-primary mt-2">Best Value</span></h3>
+              <div class="d-flex align-items-center px-3 pb-3">
+                <i class="fas fa-check text-success"></i>
+                <p class="card-text text-left px-3">1GB Storage Space</p>
+              </div>
+              <div class="d-flex align-items-center px-3 pb-3">
+                <i class="fas fa-check text-success"></i>
+                <p class="card-text text-left px-3">Unlimited Sharing</p>
+              </div>
+              <div class="d-flex align-items-center px-3 pb-3">
+                <i class="fas fa-check text-success"></i>
+                <p class="card-text text-left px-3">25% Off Server Upgrade</p>
+              </div>
+              <div class="d-flex align-items-center px-3 pb-3">
+                <i class="fas fa-check text-success"></i>
+                <p class="card-text text-left px-3">Dedicated Support</p>
+              </div>
+              <div class="d-flex align-items-center px-3 pb-3">
+                <i class="fas fa-check text-success"></i>
+                <p class="card-text text-left px-3">Live Chat with Other Curators</p>
+              </div>
+              <div class="d-flex align-items-center px-3 pb-3">
+                <i class="fas fa-check text-success"></i>
+                <p class="card-text text-left px-3">Cancel Anytime</p>
+              </div>
+              <a href="#!" class="w-100 mt-5 btn btn-primary">Select</a>
+            </div>
+          </div><!-- .card -->
+        </div>
+        <div class="col col-12 col-md-4">
+          <div class="card text-center">
+            <img
+              src="img/pricing3.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h3 class="card-title font-weight-bold mt-3 mb-5">$19.99 / mo</h3>
+              <div class="d-flex align-items-center px-3 pb-3">
+                <i class="fas fa-check text-success"></i>
+                <p class="card-text text-left px-3">15GB Storage</p>
+              </div>
+              <div class="d-flex align-items-center px-3 pb-3">
+                <i class="fas fa-check text-success"></i>
+                <p class="card-text text-left px-3">Unlimited Sharing</p>
+              </div>
+              <div class="d-flex align-items-center px-3 pb-3">
+                <i class="fas fa-check text-success"></i>
+                <p class="card-text text-left px-3">Free Server Upgrade</p>
+              </div>
+              <div class="d-flex align-items-center px-3 pb-3">
+                <i class="fas fa-check text-success"></i>
+                <p class="card-text text-left px-3">Dedicated Support</p>
+              </div>
+              <div class="d-flex align-items-center px-3 pb-3">
+                <i class="fas fa-check text-success"></i>
+                <p class="card-text text-left px-3">Live Chat with Other Curators</p>
+              </div>
+              <div class="d-flex align-items-center px-3 pb-3">
+                <i class="fas fa-check text-success"></i>
+                <p class="card-text text-left px-3">Cancel Anytime</p>
+              </div>
+              <a href="#!" class="w-100 mt-5 btn btn-primary">Select</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Pricing -->
+    <div class="row scrollTargets" id="faq"></div>
+    <!-- FAQs -->
+    <div class="row justify-content-center bg-primary py-0 py-md-5 mt-5">
+      <img src="img/halflogo.svg" alt="Turntable Lyrics" id="halflogo" class="d-none d-md-block">
+      <img src="img/redbubble.svg" alt="Turntable Lyrics" id="halflogored" class="d-none d-md-block">
+      <h2 class="text-white display-4 pt-5 pb-3 slideDown">FAQ</h2>
+    </div>
+    <div class="row bg-blue justify-content-center faq-row">
+      <div class="col col-12 col-md-8 col-xl-6 text-center slideUp">
+        <!--Accordion wrapper-->
+        <div class="accordion md-accordion rounded-0" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+          <!-- Accordion card -->
+          <div class="card">
+
+            <!-- Card header -->
+            <div class="card-header" role="tab" id="headingOne1">
+              <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
+                aria-controls="collapseOne1">
+                <h5 class="mb-0">
+                  Collapsible Group Item #1 <i class="fas fa-angle-down rotate-icon"></i>
+                </h5>
+              </a>
+            </div>
+
+            <!-- Card body -->
+            <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+              data-parent="#accordionEx">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                labore sustainable VHS.
+              </div>
+            </div>
+
+          </div>
+          <!-- Accordion card -->
+
+          <!-- Accordion card -->
+          <div class="card">
+
+            <!-- Card header -->
+            <div class="card-header" role="tab" id="headingTwo2">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
+                aria-expanded="false" aria-controls="collapseTwo2">
+                <h5 class="mb-0">
+                  Collapsible Group Item #2 <i class="fas fa-angle-down rotate-icon"></i>
+                </h5>
+              </a>
+            </div>
+
+            <!-- Card body -->
+            <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
+              data-parent="#accordionEx">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                labore sustainable VHS.
+              </div>
+            </div>
+
+          </div>
+          <!-- Accordion card -->
+
+          <!-- Accordion card -->
+          <div class="card">
+
+            <!-- Card header -->
+            <div class="card-header" role="tab" id="headingThree3">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree3"
+                aria-expanded="false" aria-controls="collapseThree3">
+                <h5 class="mb-0">
+                  Collapsible Group Item #3 <i class="fas fa-angle-down rotate-icon"></i>
+                </h5>
+              </a>
+            </div>
+
+            <!-- Card body -->
+            <div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+              data-parent="#accordionEx">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                labore sustainable VHS.
+              </div>
+            </div>
+
+          </div>
+          <!-- Accordion card -->
+
+        </div>
+        <!-- Accordion wrapper -->
+
+        <div class="footer w-100 d-flex flex-column justiy-content-center align-items-center mt-0 mt-md-5 pt-5">
+          <hr>
+          <p class="text-mute mb-0 text-center mt-3 mb-2">
+            <a href="#" class="text-light" style="text-decoration:underline;">Contact Us</a>
+            <a href="#" class="text-light mx-2" style="text-decoration:underline;">Legal</a>
+            <a href="#" class="text-light" style="text-decoration:underline;">Privacy</a></p>
+          <p class="text-white">Turntable Lyrics &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; &copy; 2021 All Rights Reserved</p>
+        </div>
+      </div>
+      
+    </div>
+    <!-- End of FAQs & footer -->
+  </div><!--.container-fluid -->
+
+  <div id="footer-widgets">
+    <div id="footer-widgets-support" class="badge badge-danger">
+      <div id="contact-support" class="d-flex align-items-center">
+        <i class="far fa-comment mr-2"></i>
+        <p class="mb-0 font-weight-light">Contact Support</p>
+      </div>
+    </div>
+    <div id="footer-widgets-backtop" class="badge badge-dark d-none">
+      <div id="back-top" class="d-flex align-items-center">
+        <i class="fas fa-chevron-up mr-2"></i>
+        <p class="mb-0 font-weight-light"><a href="#" class="text-white">Back Top</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+  <!-- Theme JavaScript-->
+  <script src="js/theme.js"></script>
+  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+  <script>
+    ScrollOut({
+      targets: ".slideUp,.slideDown"
+    });
+  </script>
+</html>

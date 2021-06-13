@@ -1,0 +1,14 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 722 707" width="722" height="707">
+	<title>Landing Page Illustration-ai</title>
+	<defs>
+		<image width="318" height="175" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAACvAgMAAAAZG1rxAAAAAXNSR0IB2cksfwAAAAlQTFRF////////AAAAjvTD7AAAAAN0Uk5TAP//RFDWIQAABHVJREFUeJztmD2O5DYQhaUFZMDOZcAHsM+hxPkEW4Wlog6WAjSnmCM4cAnWRA5WDaxP6SrqnxQpTTcdGOADZgDNUB9Zr6pIdmdZUlJSUlJSUlJSUtL/WwVEBpZQxQUCvETl5QCfowKL2MASIG5WmBc1K2whRc1KISuMaSIJUMXj5QBxTSxGYDwTS9BxTYQRGK0SJwvjmVjMwFgmct+pqMB5gbGyskQcKyvlCqyiAFdeHBPzDTCKiRsL45hYboFVBOACU3FM3FoYxcTFQoxkIuxVPcvLYwMLC/h0VkoL+HRWwNaTvNFCmmn6aRNtC5820bbQZ2JRXeNtimYJ+3jiiwv/YQVisBKvZn+OWG+Qh2u5mn3HQY+J+cXs233nNbG4CHSKBj3AkuB2BegWjScr3nJyxx3oICvectrr2MKDtfDA7grQjZiOs1LIf6pzoLysp3tS0ERzIT3vFSdi8pnoceIgkEOR86rUE/51CnQtNIvUjonTpnkKXDFoYSsrFKKO3uu3E56naEQ3JxR9ZK0l20I9fxZwXjWFoE6zcmThRLRelT+pU2AgYisr00g6+SzoKxo3KwUSr1wNJ71yEPGa7J2JJRoz6PUWBNq0XQd+3o80M7UUBAYtBG1NrUzJ/xkCFvsl4eYctUzMeWANmncR7aVlvq1rmWRjYsH28T/6GuAtADSBHQSLjomlmUjx4O7m5+VmSXYPb7SbujGjG/XHRyK2VG2nRtW+3mFQgV454+2B0IvBveqCEYe0+VZIOoqt+Q4N1v5eCfad0RJdiSjEpm4oADy1cM3KVJ8aEOvu74ctXEzMoR3GYqgJe98eO1tIAeDLMlSTUgP1AK/KF/K5hYuJhVS/1ncE3sO8ZVO67yvncR6qNSHouulaby9/4koNLY42Jk6XW94dqPM2ij/ibXe/zBYyjvOi3PN/jZjgeGdwTcy1APnnvbv7MpJlFgvdB3GExmAaceAffvRfRfJdBvwrHXMCMMhDG7iJFJ4CtP8oISoOl7fXPnhpL+0wPeKsfGruPQ3i4zc/70rfGfGZlHfiZ8PbV4CXu8EdOoBs4k+yrfPdMHjGy7kdrJklZRW7o8xzYO9nn6+GTC+mwHg8hng5IuftvK5ZX8ddCYdQwFmhRsdouxYPMSeN3wd1C/G47+SExV3deID17zQoXZ/cXLEF1YwIGkIBK7GFy+ZLmMchG//muH3RcsOp8Sp8wsuyX4nHdeyOf3HTLHI/uvIRD3q5CwSqx/C0khm9p8hWubdk9AyUo1hOkfcrvPHgaWu5o0G7J842aORV3q9/zfRbLSeZVrXerWxRz/uBOungvcplZ0a1pU2t1oKx+Dovy36REkTasWhxEFFq6yM8XuOgh9G1yTdpcFzi18Prh3BC7AH1XCVqbT8NjeaqfuCLyWLKco/jpqca4iuC6nHgU/ixL/3k/mB+xqWptawfwrF+VNTpaRsYiZyRdnh7lJeZ84BwzLb84moJ76YXtL3oDP3XJ2mTfpaYKfjJKykpKSkpKSkpKSnpv9W/2YP9thz0zY0AAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<g id="Illustration">
+		<g id="Mountains" style="mix-blend-mode: screen">
+			<use id="&lt;Image&gt;" href="#img1" transform="matrix(1.001,0,0,1,185.629,553.5)"/>
+		</g>
+	</g>
+</svg>
